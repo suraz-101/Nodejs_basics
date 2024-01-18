@@ -2,12 +2,12 @@
 
 # Day - 17 : Node Module System
 
--http feature of node allows to trasfer data over the Hyper Text Transfer Protocol (HTTP)
+- http feature of node allows to trasfer data over the Hyper Text Transfer Protocol (HTTP)
 
 - used createServer() method to create server
 
   - Syntax:
-    createServer(callBackFunction) => call backfunction takes two argument that is request and response to send the req and res to the server
+    - createServer(callBackFunction) => call backfunction takes two argument that is request and response to send the req and res to the server
 
 - used listen() method to listen identify in which port server will listen
 
@@ -21,3 +21,7 @@
 - If the reponse from the HTTP server is supposed to be displayed as HTML , we should include an HTTP header witht the correct content type as:
 
 res.writeHead(200, {'Content-Type':'text/html'});
+
+- Creating own library
+
+  -export library using module.exports = {method1, method2};
