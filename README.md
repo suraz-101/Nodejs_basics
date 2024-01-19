@@ -1,6 +1,6 @@
-# Day - 16 : Nodejs_basics
+# Day - 15 : Nodejs_basics
 
-# Day - 17 : Node Module System
+# Day - 16 : Node Module System
 
 - http feature of node allows to trasfer data over the Hyper Text Transfer Protocol (HTTP)
 
@@ -25,3 +25,5 @@ res.writeHead(200, {'Content-Type':'text/html'});
 - Creating own library
 
   -export library using module.exports = {method1, method2};
+
+# Day 17 - Nodejs, HTML, CSS and JS Practice

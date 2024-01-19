@@ -6,6 +6,9 @@ const library2 = require("./library2");
 const dateTime = require("./dateTime");
 const temp = require("./temp");
 const mToKm = require("./mToKm");
+const truncate = require("./lognDescription");
+
+const validation = require("./validation");
 http
   .createServer((request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
@@ -43,3 +46,14 @@ console.log(
   "The conversion of " + meter + "m into Kilomerter is : ",
   mKm + "km"
 );
+
+const phoneNumber = 9846779106;
+
+const valid = validation.isValid(phoneNumber);
+console.log("The given number " + phoneNumber + " is " + valid);
+
+const string =
+  "My name is Suraj Pandey. I live in Pokhara which is the most beautiful city of Nepal loacated at the mid western region of Nepal. It si the main gateway to numerous Trek.";
+
+const response = truncate.truncate(string);
+console.log(response);
