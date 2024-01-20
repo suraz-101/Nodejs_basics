@@ -3,15 +3,12 @@
 
 // eg:
 
-const string =
-  "My name is Suraj Pandey. I live in Pokhara which is the most beautiful city of Nepal loacated at the mid western region of Nepal. It si the main gateway to numerous Trek.";
-
 const truncate = (string) => {
   return string.slice(0, 60).concat("...");
 };
 
-const res = truncate(string);
-console.log(res);
+// const res = truncate(string);
+// console.log(res);
 
 module.exports = { truncate };
 
