@@ -28,3 +28,4 @@ res.writeHead(200, {'Content-Type':'text/html'});
 
 # Day 17 - Nodejs, HTML, CSS and JS Practice
 
+# Day 18 - NPM (Node Package Manager)

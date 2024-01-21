@@ -1,0 +1,12 @@
+{
+  "name": "nodejs_basics",
+  "version": "1.0.0",
+  "description": "# Day - 16 : Node Module System",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
