@@ -1,4 +1,4 @@
-const encryption = require("bcryptjs");
+const encryption = require("bcryptjs"); // importing predefined bcryptjs library from npm
 const password = "suraj12";
 
 // generating hash of the password ready to store in database
