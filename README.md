@@ -28,4 +28,10 @@ res.writeHead(200, {'Content-Type':'text/html'});
 
 # Day 17 - Nodejs, HTML, CSS and JS Practice
 
-# Day 18 - NPM (Node Package Manager)
+# Day 18 - NPM (Node Package Manager) module play
+
+# Day 19 - NPM
+
+- learned about bcrypt.js library and used hashSync method encrypt the password and compareSync method to compared the previously hashed password and return the boolean. If password mached it will return true and if wrong it will return false.
+
+- learned about Nodemailer Package of Npm
