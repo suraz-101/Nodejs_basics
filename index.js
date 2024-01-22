@@ -11,6 +11,8 @@ const truncate = require("./lognDescription");
 const greeting = require("./greeting");
 
 const validation = require("./validation");
+
+const sendmail = require("./usingNpmModule/nodemailer/index");
 http
   .createServer((request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
@@ -69,3 +71,10 @@ console.log("|                          |");
 console.log("---------------------------");
 
 console.log("-----------------------------------------------------");
+console.log("---------------------------");
+console.log("|                          |");
+console.log("  Send mail    ");
+console.log("|                          |");
+console.log("---------------------------");
+const mail = sendmail.sendEmail();
+console.log(mail);
