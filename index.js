@@ -76,12 +76,12 @@ console.log("|                          |");
 console.log("  Send mail    ");
 console.log("|                          |");
 console.log("---------------------------");
-const emails = [
-  { name: "Suraj Pandey", email: "surazpandey101@gmail.com" },
-  { name: "Sandesh Subedi", email: "sandesh@gmail.com" },
-  { name: "Nabin Chhetri", email: "nabin@gmail.com" },
-  { name: "Suraj", email: "surazpandey832@gmail.com" },
-];
+// const emails = [
+//   { name: "Suraj Pandey", email: "surazpandey101@gmail.com" },
+//   { name: "Sandesh Subedi", email: "sandesh@gmail.com" },
+//   { name: "Nabin Chhetri", email: "nabin@gmail.com" },
+//   { name: "Suraj", email: "surazpandey832@gmail.com" },
+// ];
 const message = "Hello";
 const mailOptions = {
   from: "Suraj Pandey <surazpandey101@gmail.com>",
@@ -89,7 +89,7 @@ const mailOptions = {
   subject: "Testing",
   text: `${message}`,
   html: "<h1>Hello</h1>",
-  attachment: [
+  attachments: [
     {
       filename: "attachment.jpg",
       path: "./images/attachment.jpg",
