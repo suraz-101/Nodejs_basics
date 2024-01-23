@@ -35,3 +35,5 @@ res.writeHead(200, {'Content-Type':'text/html'});
 - learned about bcrypt.js library and used hashSync method encrypt the password and compareSync method to compared the previously hashed password and return the boolean. If password mached it will return true and if wrong it will return false.
 
 - learned about Nodemailer Package of Npm
+
+# Day - 20 : Nodejs Practice Exercises

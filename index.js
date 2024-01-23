@@ -76,5 +76,26 @@ console.log("|                          |");
 console.log("  Send mail    ");
 console.log("|                          |");
 console.log("---------------------------");
-const mail = sendmail.sendEmail();
+const emails = [
+  { name: "Suraj Pandey", email: "surazpandey101@gmail.com" },
+  { name: "Sandesh Subedi", email: "sandesh@gmail.com" },
+  { name: "Nabin Chhetri", email: "nabin@gmail.com" },
+  { name: "Suraj", email: "surazpandey832@gmail.com" },
+];
+const message = "Hello";
+const mailOptions = {
+  from: "Suraj Pandey <surazpandey101@gmail.com>",
+  to: "surazpandey101@gmail.com",
+  subject: "Testing",
+  text: `${message}`,
+  html: "<h1>Hello</h1>",
+  attachment: [
+    {
+      filename: "attachment.jpg",
+      path: "./images/attachment.jpg",
+    },
+  ],
+};
+
+const mail = sendmail.sendEmail(mailOptions);
 console.log(mail);
