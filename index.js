@@ -1,16 +1,19 @@
 // importing nodejs feature
 
 const http = require("http");
-const library = require("./library"); // importing own defined library
-const library2 = require("./library2");
-const dateTime = require("./dateTime");
-const temp = require("./temp");
-const mToKm = require("./mToKm");
+const library = require("./libraries/library"); // importing own defined library
+const library2 = require("./libraries/library2");
+const dateTime = require("./libraries/dateTime");
+const temp = require("./libraries/temp");
+const mToKm = require("./libraries/mToKm");
 const truncate = require("./lognDescription");
-const greeting = require("./greeting");
-const validation = require("./validation");
+const greeting = require("./libraries/greeting");
+const validation = require("./libraries/validation");
 const sendmail = require("./usingNpmModule/nodemailer/index");
 const maxMin = require("./Day21/index");
+const { resourceUsage } = require("process");
+const pdf = require("./pdfConverter/pdf");
+// require("dotenv").config();
 http
   .createServer((request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
@@ -95,11 +98,11 @@ const mailOptions = {
   ],
 };
 
-const mail = sendmail.sendEmail(mailOptions);
-console.log(mail);
+// const mail = sendmail.sendEmail(mailOptions);
+// console.log(mail);
 
 console.log("------------------MAX-MIN------------------");
-const array = [2, 5, 77, 1, 0];
+const array = [2, 5, 77, 1, 99];
 const maximum = maxMin.maximum(array);
 const minimum = maxMin.minimum(array);
 console.log("The maximum value from an array is : ", `${maximum}`);
@@ -109,8 +112,28 @@ console.log("The minimum value from an array is : ", `${minimum}`);
 // Write a nodejs application to convert the currency
 //from one currency to another using package currency-converter-Lt
 
+// const cc = require("currency-converter-lt");
+
+const curency = require("./currencyConverter/currency");
+const from = "USD";
+const to = "NPR";
+const amount = 3;
+const result = async () => {
+  const convertedCurrency = await curency.converter(from, to, amount);
+  const result =
+    "The conversion of " + amount + " USD into NPR is :" + convertedCurrency;
+  console.log(result);
+  console.log("......Ended......");
+};
+result();
+
 //Write a node.js application that can generate pdf
 //using text and images. Use package: pdfkit
 // Destructure
 //argument pass
 //async await
+const text =
+  "Hi, it's me Suraj pandey. Currently, I am living in Pokhara which is one of the beautiful city of Nepal located at the western region of Nepal. It is surrounded with various beautiful senic views and is main gateway to Annapurna Base Camp.";
+textFont = 25;
+const imagePath = "./images/attachment.jpg";
+pdf.createPdf(text, textFont, imagePath);
