@@ -7,12 +7,10 @@ const dateTime = require("./dateTime");
 const temp = require("./temp");
 const mToKm = require("./mToKm");
 const truncate = require("./lognDescription");
-
 const greeting = require("./greeting");
-
 const validation = require("./validation");
-
 const sendmail = require("./usingNpmModule/nodemailer/index");
+const maxMin = require("./Day21/index");
 http
   .createServer((request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
@@ -76,12 +74,12 @@ console.log("|                          |");
 console.log("  Send mail    ");
 console.log("|                          |");
 console.log("---------------------------");
-// const emails = [
-//   { name: "Suraj Pandey", email: "surazpandey101@gmail.com" },
-//   { name: "Sandesh Subedi", email: "sandesh@gmail.com" },
-//   { name: "Nabin Chhetri", email: "nabin@gmail.com" },
-//   { name: "Suraj", email: "surazpandey832@gmail.com" },
-// ];
+const emails = [
+  { name: "Suraj Pandey", email: "surazpandey101@gmail.com" },
+  { name: "Sandesh Subedi", email: "sandesh@gmail.com" },
+  { name: "Nabin Chhetri", email: "nabin@gmail.com" },
+  { name: "Suraj", email: "surazpandey832@gmail.com" },
+];
 const message = "Hello";
 const mailOptions = {
   from: "Suraj Pandey <surazpandey101@gmail.com>",
@@ -99,3 +97,20 @@ const mailOptions = {
 
 const mail = sendmail.sendEmail(mailOptions);
 console.log(mail);
+
+console.log("------------------MAX-MIN------------------");
+const array = [2, 5, 77, 1, 0];
+const maximum = maxMin.maximum(array);
+const minimum = maxMin.minimum(array);
+console.log("The maximum value from an array is : ", `${maximum}`);
+
+console.log("The minimum value from an array is : ", `${minimum}`);
+
+// Write a nodejs application to convert the currency
+//from one currency to another using package currency-converter-Lt
+
+//Write a node.js application that can generate pdf
+//using text and images. Use package: pdfkit
+// Destructure
+//argument pass
+//async await

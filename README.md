@@ -37,3 +37,5 @@ res.writeHead(200, {'Content-Type':'text/html'});
 - learned about Nodemailer Package of Npm
 
 # Day - 20 : Nodejs Practice Exercises
+
+# Day - 21 : Nodejs Practice with other packages

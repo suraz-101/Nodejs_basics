@@ -1,12 +1,14 @@
 //importing package
 const nodemailer = require("nodemailer");
+require("dotenv").config();
 
+// console.log(process.env);
 //using google transport portocol to send email creating the transport object
 const transport = nodemailer.createTransport({
   service: "gmail",
   auth: {
-    user: "surazpandey832@gmail.com",
-    pass: "viztdpeqgqqcuima", //
+    user: process.env.USERNAME,
+    pass: process.env.PASSWORD, //
   },
 });
 

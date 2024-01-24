@@ -1,12 +1,17 @@
 {
-  "name": "nodejs_basics",
+  "name": "nodemailer",
   "version": "1.0.0",
-  "description": "# Day - 16 : Node Module System",
+  "description": "",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "dependencies": {
+    "dotenv": "^16.4.0",
+    "nodemailer": "^6.9.8",
+    "qrcode": "^1.5.3"
+  }
 }
