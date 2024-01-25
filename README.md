@@ -36,8 +36,27 @@ res.writeHead(200, {'Content-Type':'text/html'});
 
 - learned about Nodemailer Package of Npm
 
+  - For instance: In real world project we can use nodemailer package to send the mail to the customer after customer login to the system, or to confirm the valid username and passwrord once customer register using the email address.
+
 # Day - 20 : Nodejs Practice Exercises
 
 # Day - 21 : Nodejs Practice with other packages
 
+- learned about pdfkit and currency-converter-lt npm package which helps us to print the pdf and convert the currency, respectively.
+
+For eg: In real world project we can use pdfkit package to print the bill of the customer in e-commerce application after customer pays the bills.
+
 # Day - 22 : Events, Theory and Nodejs Exercises
+
+- Learned about the events and how can we handle events inside node.js
+  Nodejs has inbuilt module called event which will help to make our own events
+  Syntax : const event = require('events);
+  const eventEmmiter = new event.EventEmitter();
+  eventEmitter.on("buttoncClicked", ()=>{console.log("button is clicked)});
+  eventEmitter.emit("buttonClicked");
+
+  => We can also send arguments using emit method along with eevnt name as foloows:
+  evemtEmiiter.on(eventname, callbackfunction);
+  eventEmitter.emit(event, argument1, argument2);
+
+Note: event module helps us to easily create and handle custom eventsin nodejs.
