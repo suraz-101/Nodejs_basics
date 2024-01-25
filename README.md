@@ -39,3 +39,5 @@ res.writeHead(200, {'Content-Type':'text/html'});
 # Day - 20 : Nodejs Practice Exercises
 
 # Day - 21 : Nodejs Practice with other packages
+
+# Day - 22 : Events, Theory and Nodejs Exercises
