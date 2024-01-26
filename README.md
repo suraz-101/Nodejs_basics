@@ -60,3 +60,5 @@ For eg: In real world project we can use pdfkit package to print the bill of the
   eventEmitter.emit(event, argument1, argument2);
 
 Note: event module helps us to easily create and handle custom eventsin nodejs.
+
+# Day - 23 : Node js test

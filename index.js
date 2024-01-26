@@ -132,8 +132,28 @@ result();
 // Destructure
 //argument pass
 //async await
-const text =
-  "Hi, it's me Suraj pandey. Currently, I am living in Pokhara which is one of the beautiful city of Nepal located at the western region of Nepal. It is surrounded with various beautiful senic views and is main gateway to Annapurna Base Camp.";
-textFont = 25;
-const imagePath = "./images/attachment.jpg";
-pdf.createPdf(text, textFont, imagePath);
+// const text =
+//   "Hi, it's me Suraj pandey. Currently, I am living in Pokhara which is one of the beautiful city of Nepal located at the western region of Nepal. It is surrounded with various beautiful senic views and is main gateway to Annapurna Base Camp.";
+// textFont = 25;
+// const imagePath = "./images/attachment.jpg";
+// pdf.createPdf(text, textFont, imagePath);
+const fs = require("fs");
+const filesystem = require("./Day23/index.js");
+const content = "Hellow Word";
+const path = "./hellow.txt";
+
+// const path = "./Day23/";
+const initialising = (path, text) => {
+  filesystem.writeIntoFile(path, text);
+  filesystem.readFromFile(path);
+};
+
+// filesystem.readFromFile(path, "utf8");
+
+initialising(path, content);
+
+const number = "100000";
+
+const commaPlacement = require("./Day23/placement");
+const commaResult = commaPlacement.convert(Number(number));
+console.log(commaResult);
