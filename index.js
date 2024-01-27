@@ -13,15 +13,18 @@ const sendmail = require("./usingNpmModule/nodemailer/index");
 const maxMin = require("./Day21/index");
 const { resourceUsage } = require("process");
 const pdf = require("./pdfConverter/pdf");
+const filesystem = require("./Day23/index.js");
+require("dotenv").config();
+
 // require("dotenv").config();
 http
   .createServer((request, response) => {
     response.writeHead(200, { "Content-Type": "text/html" });
     response.end("hellow world");
   })
-  .listen(8000);
+  .listen(process.env.PORT);
 
-console.log("Server is running at 8000");
+console.log(`Server is running at ${process.env.PORT}`);
 console.log("-----------------------------------------------------");
 
 //using the methods of own created lbrary
@@ -115,6 +118,12 @@ console.log("The minimum value from an array is : ", `${minimum}`);
 // const cc = require("currency-converter-lt");
 
 const curency = require("./currencyConverter/currency");
+// const data ={
+//   from : "USD",
+//   to : "NPR",
+//   amount:3,
+
+// }
 const from = "USD";
 const to = "NPR";
 const amount = 3;
@@ -137,8 +146,7 @@ result();
 // textFont = 25;
 // const imagePath = "./images/attachment.jpg";
 // pdf.createPdf(text, textFont, imagePath);
-const fs = require("fs");
-const filesystem = require("./Day23/index.js");
+
 const content = "Hellow Word";
 const path = "./hellow.txt";
 
