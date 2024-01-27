@@ -147,13 +147,24 @@ result();
 // const imagePath = "./images/attachment.jpg";
 // pdf.createPdf(text, textFont, imagePath);
 
-const content = "Hellow Word";
+const content = {
+  name: "suraj",
+  username: "surajpandey101@gmail.com",
+};
 const path = "./hellow.txt";
 
 // const path = "./Day23/";
 const initialising = (path, text) => {
+  // filesystem.initilization.re;
   filesystem.writeIntoFile(path, text);
-  filesystem.readFromFile(path);
+
+  setTimeout(() => {
+    filesystem.readFromFile(path);
+  }, 2000);
+
+  setTimeout(() => {
+    filesystem.updateFile(path);
+  }, 3000);
 };
 
 // filesystem.readFromFile(path, "utf8");
