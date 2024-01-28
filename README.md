@@ -62,3 +62,11 @@ For eg: In real world project we can use pdfkit package to print the bill of the
 Note: event module helps us to easily create and handle custom eventsin nodejs.
 
 # Day - 23 : Node js test
+
+# Day - 24 : ExpressJs
+
+- API
+  - Methods
+- Status Code
+
+- Express (javascript framework)
